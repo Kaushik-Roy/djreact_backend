@@ -39,9 +39,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'corsheaders',
+
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+
+    'allauth.socialaccount',
+    
     'articles'
 ]
+
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -144,3 +158,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     'localhost:8000',
 #     '127.0.0.1:9000'
 # )
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
